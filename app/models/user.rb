@@ -19,7 +19,8 @@ class User < ActiveRecord::Base
 	has_secure_password
 
 	validates :password,
-		length: { minimum: 6 }
+		length: { minimum: 6 },
+		allow_blank: true
 	
 	#Remember a user in the database for use in persistent sessions
 	def remember
